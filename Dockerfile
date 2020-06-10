@@ -2,7 +2,7 @@ FROM tomcat:8.0-alpine
 
 LABEL maintainer="rajeev"
 
-ADD GetStartedTomcat.war /usr/local/tomcat/webapps/
+COPY target/*.war $CATALINA_HOME/webapps/demotomcat.war
 
 EXPOSE 8080
 
